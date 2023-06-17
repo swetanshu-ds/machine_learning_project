@@ -77,7 +77,6 @@ I am learning git commands
 ```
 
 
-```
 To setup CI/CD pipeline in heroku we need 3 information
 1. HEROKU_EMAIL = sprajpan123@gmail.com
 2. HEROKU_API_KEY = af3948b4-5845-4363-88ea-5ea8db24305a
@@ -89,9 +88,9 @@ BUILD DOCKER IMAGE
 ```
 docker build -t <image_name>:<tagname> .
 ```
-
+```
 > Note: Image name for docker must be lowercase
-
+```
 
 To list docker images
 ```
