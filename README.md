@@ -8,7 +8,8 @@
 4. [Git CLI](https://git-scm.com/downloads)
 
 my machine learning project
- 
+
+```
 Creating conda environment
 
 ```
@@ -16,7 +17,6 @@ OR
 ```
 conda activate venv/
 ```
-
 ```
 pip install -r requirements.txt
 ```
