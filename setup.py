@@ -9,6 +9,9 @@ DESCRIPTION  = "This is my project of FSDS"
 PACKAGES = ["housing"]
 REQUIREMENT_FILE_NAME = 'requirements.txt'
 
+
+HYPHEN_E_DOT = "-e ."
+
 def get_requirements_list() -> List[str]:
 
     """
@@ -19,7 +22,7 @@ def get_requirements_list() -> List[str]:
     """
 
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        requirement_file.readlines().remove("-e .")
+        requirement_file.readlines()
 
 
 setup(
