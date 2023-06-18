@@ -112,3 +112,19 @@ To stop any container
 ```
 docker stop <container_id>
 ```
+
+
+
+.gitignore
+```
+All these files that we do not want to be tracked by git ,we write their names in
+.gitignore
+```
+
+.dockerignore
+```
+all those files that we do not want to use for the docker ,specify in the dockerignore
+
+```
+
+
