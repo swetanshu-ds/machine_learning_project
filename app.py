@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/",methods = ['GET','POST'])
 def index():
     logging.info("We are testing logging module")
-    return "Starting Machine Learning Project"
+    return "Starting Machine Learning Project, CICD pipeline has been established"
 
 
 if __name__ == "__main__":
