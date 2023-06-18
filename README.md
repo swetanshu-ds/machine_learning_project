@@ -128,3 +128,9 @@ all those files that we do not want to use for the docker ,specify in the docker
 ```
 
 
+
+To install any .py file 
+
+```
+python setup.py install
+```
