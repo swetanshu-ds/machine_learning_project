@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 from typing import List, Dict 
 
 # Declaring variables for setup functions
@@ -27,7 +27,7 @@ name=PROJECT_NAME,
 versions=VERSION,
 author=AUTHOR,
 description=DESCRIPTION,
-packages=PACKAGES,
+packages=find_packages(),   # it will return all the packages names ,eans all the folders name it will return whcih contain __init__.py files inside it
 install_requires=get_requirements_list()
 )
 
