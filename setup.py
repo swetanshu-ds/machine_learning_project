@@ -17,7 +17,7 @@ def get_requirements_list() -> List[str]:
     """
     Description: This function is going to return list of requirement
     mention in requirements.txt file
-    return This function is going to return a list which contain name
+    return This function is going to sreturn a list which contain name
     of libraries mentioned in requirements.txt file
     """
 
