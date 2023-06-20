@@ -23,14 +23,11 @@ def get_requirements_list() -> List[str]:
 
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
         req_list = requirement_file.readlines()
-        #print(req_list)
         l = []
         for i in range(len(req_list)):
             a = req_list[i][:-1]
             l.append(a)
-        #print(l)
-        l[-1] = '-e .'
-        #print(l)
+        l[-1] = '-e .'  
         req_list = l
         if "-e ." in req_list:
             req_list.remove("-e .")
