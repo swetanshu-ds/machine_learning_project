@@ -22,7 +22,21 @@ def get_requirements_list() -> List[str]:
     """
 
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        requirement_file.readlines()
+        req_list = requirement_file.readlines()
+        #print(req_list)
+        l = []
+        for i in range(len(req_list)):
+            a = req_list[i][:-1]
+            l.append(a)
+        #print(l)
+        l[-1] = '-e .'
+        #print(l)
+        req_list = l
+        if "-e ." in req_list:
+            req_list.remove("-e .")
+        return req_list
+
+
 
 
 setup(
@@ -36,5 +50,5 @@ install_requires=get_requirements_list()
 
 
 
-#if __name__ == "__main__":
-#    print(get_requirements_list())s
+if __name__ == "__main__":
+    print(get_requirements_list())

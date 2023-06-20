@@ -1,0 +1,1 @@
+##### "-e ." it will search all the packages folders in the current directory ,((packages folders contain the __init__.py files))  and then install it.
