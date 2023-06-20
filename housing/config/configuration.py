@@ -4,7 +4,7 @@ from housing.util.util import read_yaml_file
 from housing.exception import HousingException
 import os,sys
 from housing.constant import *
-
+import logging
 
 
 class Configuration:
@@ -39,5 +39,9 @@ class Configuration:
             training_pipeline_config[TRAINING_PIPELINE_ARTIFACT_DIR_KEY]
             )
 
+            training_pipeline_config = TrainingPipelineConfig(artifact_dir=artifact_dir)
+            logging.info(f"Training pipeline config: {training_pipeline_config}")
+            return training_pipeline_config
+        
         except Exception as e:
-             raise HousingException(e,sys) as e
+             raise HousingException(e,sys) from  e
