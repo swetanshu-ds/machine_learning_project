@@ -33,6 +33,11 @@ class Configuration:
         pass
     def get_training_pipeline_config(self) -> TrainingPipelineConfig:
         try:
-            pass
+            training_pipeline_config = self.config_info[TRAINING_PIPELINE_CONFIG_KEY]
+            artifact_dir = os.path.join(ROOT_DIR,
+            training_pipeline_config[TRAINING_PIPELINE_NAME_KEY],
+            training_pipeline_config[TRAINING_PIPELINE_ARTIFACT_DIR_KEY]
+            )
+
         except Exception as e:
              raise HousingException(e,sys) as e
