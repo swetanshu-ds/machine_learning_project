@@ -3,7 +3,7 @@ from typing import List, Dict
 
 # Declaring variables for setup functions
 PROJECT_NAME = "housing-predictor"
-VERSION = "0.0.1"
+VERSION = "0.0.3"
 AUTHOR = "Avnish Yadav"
 DESCRIPTION  = "This is my project of FSDS"
 PACKAGES = ["housing"]
