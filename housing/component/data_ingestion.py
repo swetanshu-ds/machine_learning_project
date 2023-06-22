@@ -17,11 +17,26 @@ class DataIngestion:
             raise HousingException(e,sys)
     
 
-    def download_housing_data(self):
+    def download_housing_data(self) -> str:
         try:
             download_url =  self.data_ingestion_config.dataset_download_url
             
+            tgz_download_dir = self.data_ingestion_config.tgz_download_dir
+
+            os.makedirs(tgz_download_dir,exist_ok=True)
+
+            housing_file_name = os.path.basename(download_url)
+
+            tgz_file_path = os.path.join(tgz_download_dir,housing_file_name)
+
+            logging.info(f"Downloading file from :[{download_url}] into :[{tgz_file_path}]")
+            urllib.request.urlretrieve(download_url,tgz_file_path)
+            logging.info(f"File :[{tgz_file_path}] has been downloaded successfully. ")
+
+            return tgz_file_path 
+
         except Exception as e:
+            raise HousingException(e,sys) from e
     
     def extract_tgz_file(self):
         pass
@@ -31,7 +46,7 @@ class DataIngestion:
 
     def initiate_data_ingestion(Self) -> DataIngestionArtifact:
         try:
-            pass
+            
         except Exception as e:
                 raise HousingException(e,sys) from e
         
