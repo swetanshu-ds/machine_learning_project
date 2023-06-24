@@ -7,5 +7,6 @@ matplotlib
 PyYAML
 -e .     
 six    
+dill
 evidently   
 scikit-learn
