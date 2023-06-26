@@ -2,7 +2,7 @@ from housing.pipeline.pipeline import Pipeline
 from housing.exception import HousingException
 from housing.logger import logging
 from housing.config.configuration import Configuartion
-from housing.component.data_transformation import DataTransformation
+#from housing.component.data_transformation import DataTransformation
 import os
 def main():
     try:
